@@ -32,7 +32,7 @@ if [[ -z "${ZGEN_USE_PREZTO}" ]]; then
     ZGEN_USE_PREZTO=0
 fi
 
-if [[ -z "${ZGEN_PREZTO_LOAD_DEFAULT}" ]]; then
+if [[ -z "${ZGEN_PREZTO_LOAD_}" ]]; then
     ZGEN_PREZTO_LOAD_DEFAULT=1
 fi
 
@@ -407,7 +407,7 @@ zgen-prezto() {
             ln -s "${dir}" "${ZDOTDIR:-$HOME}/.zprezto"
         fi
         if [[ ${ZGEN_PREZTO_LOAD_DEFAULT} != 0 ]]; then
-            -zgen-prezto-load "'environment' 'terminal' 'editor' 'history' 'directory' 'spectrum' 'utility' 'completion' 'prompt'"
+            -zgen-prezto-load "'environment' 'history' 'directory' 'prompt'"
         fi
 
     # this is a prezto module
